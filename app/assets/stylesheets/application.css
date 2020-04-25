@@ -1,9 +1,51 @@
 body {
-    height:100%;
-    margin:0;
-    padding:0;
-    background:#333333;
-    font-family:sans-serif;
+    background-image: url("IMG_6235-1.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: times;
+  }
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+
+.header{
+  text-align: center;
+}
+
+.backdrop{
+  background-color: black;
+  opacity: .3;
+  background-size: cover;
+}
+
+.home{
+  color: inherit;
+  text-decoration: none;
+  padding: 2%;
+  color: whitesmoke;
+}
+
+.center_meme{
+  font-weight: bold;
+  text-align: center;
+  color: whitesmoke;
+  padding-top: 5%;
+  opacity: 1;
+}
+
+.header_text{
+  color: inherit;
+  text-decoration: none;
+  padding: 2%;
+  color: whitesmoke;
 }
 
 .hero-text {
@@ -15,51 +57,13 @@ body {
     color: whitesmoke;
 }
 
-.soundcloud{
-    top: 50%;
-    left: 50%;
-    bottom:50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-
-}
-
-.boston {
-
-    background-image: url("IMG_6235-1.jpeg");
-
-
-    height: 1000px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.quincy {
-
-    background-image: url("IMG_6757-2.jpeg");
-
-
-    height: 1000px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.portfolio {
-    padding: .5rem;
-    display: flex;
-
-}
 
 .hyper-text{
   color: inherit;
   text-decoration: inherit;
+  font-size: 90%
+}
+
+.portfolio{
+  font-family: times;
 }

@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PersonalWebsite</title>
+  <title>Eric Francis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <%= javascript_include_tag "vendor/modernizr" %>
 
   <%= csrf_meta_tags %>
+
+  <div class="header">
+    <a class="home" href="/">Home</a>
+    <a class='header_text' <%= link_to "Portfolio", portfolio_index_path %></a>
+    <a class="header_text" <%= link_to "Resume", resume_index_path %></a>
+    <a class="header_text" <%= link_to "About", about_index_path %></a>
+    <a class="header_text" <%= link_to "Contact", contact_index_path %></a>
+  </div>
+
 </head>
 <body>
   <%- flash.each do |key, value| -%>
@@ -29,4 +38,22 @@
 
   <%= yield :extra_footer %>
 </body>
+  <footer>
+    <a href="https://open.spotify.com/artist/1ebkk9iJr0dn6QUwDngd9x?si=Xii9MA9_S9-vBJV8W2DJ6g">
+      <%= image_tag 'spotify.png',style:'height:30px; width:30px;'%>
+    </a>
+    <a href="https://twitter.com/code_kage">
+       <%= image_tag"twitter.png", style: 'height:30px; width:30px;' %>
+    </a>
+    <a href="https://www.instagram.com/codekage/">
+       <%= image_tag "instagram.png", style: 'height:30px; width:30px;'  %>
+    </a>
+    <a href="https://www.linkedin.com/in/ericfrancis313/">
+      <%= image_tag "linkedin.png",style:'height:30px; width:30px;' %>
+    </a>
+
+    <a href="https://github.com/ericfrancis313">
+      <%= image_tag "github.png",style:'height:30px; width:30px;' %>
+    </a>
+  </footer>
 </html>
