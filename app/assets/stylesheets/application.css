@@ -1,62 +1,28 @@
-body {
-    background-image: url("IMG_6235-1.jpeg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: times;
-  }
 
-footer{
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: black;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0 ;
 }
 
-.header{
-  text-align: center;
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows: 4fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "title title"
+  "nav nav"
+  "tech tech-list"
+  "sidebar content"
+  "footer footer"
 }
 
-.backdrop{
-  background-color: black;
-  opacity: .3;
-  background-size: cover;
+.grid div:nth-child(even){
+  background-color:
 }
 
-.home{
-  color: inherit;
-  text-decoration: none;
-  padding: 2%;
-  color: whitesmoke;
+.grid div:nth-child(odd){
+background-color:
 }
-
-.center_meme{
-  font-weight: bold;
-  text-align: center;
-  color: whitesmoke;
-  padding-top: 5%;
-  opacity: 1;
-}
-
-.header_text{
-  color: inherit;
-  text-decoration: none;
-  padding: 2%;
-  color: whitesmoke;
-}
-
-.hero-text {
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    color: whitesmoke;
-}
-
 
 .hyper-text{
   color: inherit;
@@ -64,6 +30,72 @@ footer{
   font-size: 90%
 }
 
-.portfolio{
-  font-family: times;
+
+.intro{
+  grid-area: title;
+  text-decoration: none;
+  text-align: center;
+  color: whitesmoke;
+  padding-top:15em
+}
+
+.nav{
+  grid-area: header;
+  text-align: center;
+  padding-top:5em;
+}
+
+.nav a {
+  padding: 2em
+}
+
+.tech{
+  grid-area: sidebar;
+  text-align: center;
+  padding-top: 10em;
+}
+
+.tech-list{
+  grid-area: content;
+  list-style-type: none;
+  text-align: center;
+  padding-top: 10em
+}
+
+.footer{
+  grid-area: footer;
+  text-align:center;
+  padding-top: 20em
+
+}
+
+.aboutme{
+  text-align: center;
+}
+
+@media screen and (min-width:auto)
+{
+  .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "title title"
+    "nav nav"
+    "tech tech"
+    "tech-list tech-list"
+    "footer footer"
+  }
+}
+
+
+
+
+body {
+ background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('IMG_6235-1.jpeg');
+ background-repeat: no-repeat;
+ background-attachment:fixed !important;
+ background-size:cover !important;
+ background-position: center !important;
+ color: #fff;
 }
