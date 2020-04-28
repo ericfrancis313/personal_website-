@@ -7,21 +7,25 @@
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  grid-template-rows: 4fr 1fr 1fr 1fr;
+  grid-template-rows: 4fr 1fr 1fr 2fr 1fr 2fr 1fr;
   grid-template-areas:
   "title title"
   "nav nav"
-  "tech tech-list"
-  "sidebar content"
+  "tech tech"
+  "tech-list tech-list"
+  "aboutme aboutme"
+  "content content"
+  "contact-me contact-me"
+  "contact contact"
   "footer footer"
 }
 
 .grid div:nth-child(even){
-  background-color:
+  background-color:;
 }
 
 .grid div:nth-child(odd){
-background-color:
+background-color:;
 }
 
 .hyper-text{
@@ -36,54 +40,82 @@ background-color:
   text-decoration: none;
   text-align: center;
   color: whitesmoke;
-  padding-top:15em
+  padding-top: 15em;
+}
+
+.scroll{
+  padding-top: 10em;
 }
 
 .nav{
   grid-area: header;
   text-align: center;
-  padding-top:5em;
+  padding-top: 5em;
 }
 
 .nav a {
-  padding: 2em
+  padding: 1em;
+  border-style: solid;
+  color: white;
+}
+
+.nav a:hover{
+  background-color: white;
+  color:black;
+}
+
+.content{
+  grid-area: content;
+
 }
 
 .tech{
-  grid-area: sidebar;
+  grid-area: tech;
   text-align: center;
-  padding-top: 10em;
+
 }
 
 .tech-list{
-  grid-area: content;
-  list-style-type: none;
+  grid-area: tech-list;
+  list-style-type:none;
   text-align: center;
-  padding-top: 10em
+
 }
 
 .footer{
   grid-area: footer;
   text-align:center;
-  padding-top: 20em
+
 
 }
-
-.aboutme{
+.contact{
+  text-align: center;
+  grid-area:contact;
+}
+.contact-me{
+  grid-area: contact-me;
   text-align: center;
 }
 
-@media screen and (min-width:auto)
+.aboutme{
+  grid-area: aboutme;
+  text-align: center;
+
+}
+
+@media screen and (min-width:auto;)
 {
   .grid{
     display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
-    grid-template-rows: 4fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "title title"
     "nav nav"
     "tech tech"
     "tech-list tech-list"
+    "aboutme content"
+    "contact-me contact"
     "footer footer"
   }
 }
